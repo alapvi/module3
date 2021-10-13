@@ -36,12 +36,20 @@ while True:
         print("The ocurrences of the number ",num, " is ", theList.count())
     elif option == 7:
         num = int(input("Input a number"))
-        index = 1
+        pos=0
+        for elem in range(0,theList.count(num)):
+            index = theList.index(num,pos)
+            print(index,end=" ")
+            pos = index + 1
+        print()
+        """index = 1
         for elem in theList:
             if elem == num:
                 print(index, end = " ")
             index += 1
         print()   
+        """
+
     elif option == 8:
         for elem in theList:
             print(elem,end=" ")
